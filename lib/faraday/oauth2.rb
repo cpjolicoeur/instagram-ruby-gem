@@ -5,7 +5,6 @@ module FaradayMiddleware
   # @private
   class OAuth2 < Faraday::Middleware
     def call(env)
-
       if env[:method] == :get or env[:method] == :delete
         query = Faraday::Utils.parse_query(env[:url].query)
 
